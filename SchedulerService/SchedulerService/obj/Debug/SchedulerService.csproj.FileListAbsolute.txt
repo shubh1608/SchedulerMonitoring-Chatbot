@@ -1,0 +1,10 @@
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\bin\Debug\SchedulerService.exe.config
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\bin\Debug\SchedulerService.exe
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\bin\Debug\SchedulerService.pdb
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\bin\Debug\Topshelf.dll
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\bin\Debug\Topshelf.xml
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\obj\Debug\SchedulerService.csprojAssemblyReference.cache
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\obj\Debug\SchedulerService.csproj.CoreCompileInputs.cache
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\obj\Debug\SchedulerService.csproj.CopyComplete
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\obj\Debug\SchedulerService.exe
+C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\obj\Debug\SchedulerService.pdb
