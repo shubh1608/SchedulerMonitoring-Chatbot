@@ -53,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JobListeners\JobListeners.cs" />
+    <Compile Include="Database\JobExecutionStatisticsRepository.cs" />
+    <Compile Include="Domain\JobExecutionStatistics.cs" />
+    <Compile Include="JobListeners\JobListener.cs" />
     <Compile Include="Jobs\JobA.cs" />
     <Compile Include="Jobs\JobB.cs" />
     <Compile Include="Program.cs" />
@@ -66,7 +68,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DBScripts\Create_JobExecutionStatistics_Tbl.sql" />
+    <Content Include="Database\DBScripts\Create_JobExecutionStatistics_Tbl.sql" />
     <Content Include="Logs\JobsExecutionStatistics.txt" />
   </ItemGroup>
   <ItemGroup />

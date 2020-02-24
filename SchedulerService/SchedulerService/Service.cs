@@ -1,5 +1,6 @@
 ﻿using Quartz;
 using Quartz.Impl;
+using SchedulerService.JobListeners;
 using SchedulerService.Jobs;
 using System.Collections.Specialized;
 
@@ -20,6 +21,7 @@ namespace SchedulerService
             };
             StdSchedulerFactory factory = new StdSchedulerFactory(props);
             scheduler = factory.GetScheduler().ConfigureAwait(false).GetAwaiter().GetResult();
+            scheduler.ListenerManager.AddJobListener(new JobListener());
         }
 
         public void Start()
