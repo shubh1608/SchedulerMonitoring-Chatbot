@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Topshelf;
+﻿using Topshelf;
 
 namespace SchedulerService
 {
@@ -19,7 +14,6 @@ namespace SchedulerService
                     service.WhenStarted(s => s.Start());
                     service.WhenStopped(s => s.Stop());
                 });
-
                 configure.RunAsLocalSystem();
                 configure.SetServiceName("SchedulerService");
                 configure.SetDisplayName("SchedulerService");

@@ -8,3 +8,16 @@ C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\obj\Debug\Sched
 C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\obj\Debug\SchedulerService.csproj.CopyComplete
 C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\obj\Debug\SchedulerService.exe
 C:\Users\shubhamp\source\repos\SchedulerService\SchedulerService\obj\Debug\SchedulerService.pdb
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\SchedulerService.exe.config
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\SchedulerService.exe
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\SchedulerService.pdb
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\Quartz.dll
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\Topshelf.dll
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\Quartz.pdb
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\Quartz.xml
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\Topshelf.xml
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\obj\Debug\SchedulerService.csprojAssemblyReference.cache
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\obj\Debug\SchedulerService.csproj.CoreCompileInputs.cache
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\obj\Debug\SchedulerService.csproj.CopyComplete
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\obj\Debug\SchedulerService.exe
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\obj\Debug\SchedulerService.pdb

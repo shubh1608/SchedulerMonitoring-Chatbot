@@ -1,0 +1,67 @@
+2020-02-14 20:45:53.023 +05:30 [INF] Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2020-02-14 20:45:53.045 +05:30 [DBG] TaskSchedulingThreadPool configured with max concurrency of 3 and TaskScheduler ThreadPoolTaskScheduler.
+2020-02-14 20:45:53.066 +05:30 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2020-02-14 20:45:53.070 +05:30 [INF] Quartz Scheduler v.3.0.7.0 created.
+2020-02-14 20:45:53.076 +05:30 [INF] RAMJobStore initialized.
+2020-02-14 20:45:53.085 +05:30 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 3 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-02-14 20:45:53.087 +05:30 [INF] Quartz scheduler 'MyScheduler' initialized
+2020-02-14 20:45:53.088 +05:30 [INF] Quartz scheduler version: 3.0.7.0
+2020-02-14 20:45:53.114 +05:30 [INF] Scheduler MyScheduler_$_NON_CLUSTERED started.
+2020-02-14 20:45:53.117 +05:30 [DBG] Batch acquisition of 0 triggers
+2020-02-14 20:45:53.132 +05:30 [DBG] Batch acquisition of 1 triggers
+2020-02-14 20:45:53.141 +05:30 [DBG] Producing instance of Job 'group1.jobA', class=SchedulerService.Jobs.JobA
+2020-02-14 20:45:53.146 +05:30 [DBG] Batch acquisition of 1 triggers
+2020-02-14 20:45:53.149 +05:30 [DBG] Producing instance of Job 'group1.jobB', class=SchedulerService.Jobs.JobB
+2020-02-14 20:45:53.151 +05:30 [DBG] Batch acquisition of 0 triggers
+2020-02-14 20:45:53.162 +05:30 [DBG] Calling Execute on job group1.jobA
+2020-02-14 20:45:53.162 +05:30 [DBG] Calling Execute on job group1.jobB
+2020-02-14 20:45:53.962 +05:30 [INF] joba
+2020-02-14 20:45:54.769 +05:30 [INF] jobb
+2020-02-14 20:45:58.785 +05:30 [DBG] Trigger instruction : NoInstruction
+2020-02-14 20:46:21.946 +05:30 [DBG] Batch acquisition of 0 triggers
+2020-02-14 20:46:26.776 +05:30 [DBG] Trigger instruction : NoInstruction
+2020-02-14 20:46:45.946 +05:30 [DBG] Batch acquisition of 1 triggers
+2020-02-14 20:46:53.119 +05:30 [DBG] Producing instance of Job 'group1.jobA', class=SchedulerService.Jobs.JobA
+2020-02-14 20:46:53.121 +05:30 [DBG] Batch acquisition of 0 triggers
+2020-02-14 20:46:53.124 +05:30 [DBG] Calling Execute on job group1.jobA
+2020-02-14 21:47:24.625 +05:30 [INF] Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2020-02-14 21:47:24.665 +05:30 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2020-02-14 21:47:24.667 +05:30 [INF] Quartz Scheduler v.3.0.7.0 created.
+2020-02-14 21:47:24.673 +05:30 [INF] RAMJobStore initialized.
+2020-02-14 21:47:24.680 +05:30 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 3 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-02-14 21:47:24.682 +05:30 [INF] Quartz scheduler 'MyScheduler' initialized
+2020-02-14 21:47:24.684 +05:30 [INF] Quartz scheduler version: 3.0.7.0
+2020-02-14 21:47:24.711 +05:30 [INF] Scheduler MyScheduler_$_NON_CLUSTERED started.
+2020-02-14 21:47:25.835 +05:30 [INF] joba
+2020-02-14 21:47:25.835 +05:30 [INF] jobb
+2020-02-14 21:48:37.311 +05:30 [INF] Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2020-02-14 21:48:37.361 +05:30 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2020-02-14 21:48:37.364 +05:30 [INF] Quartz Scheduler v.3.0.7.0 created.
+2020-02-14 21:48:37.376 +05:30 [INF] RAMJobStore initialized.
+2020-02-14 21:48:37.381 +05:30 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 3 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-02-14 21:48:37.383 +05:30 [INF] Quartz scheduler 'MyScheduler' initialized
+2020-02-14 21:48:37.384 +05:30 [INF] Quartz scheduler version: 3.0.7.0
+2020-02-14 21:48:37.425 +05:30 [INF] Scheduler MyScheduler_$_NON_CLUSTERED started.
+2020-02-14 21:48:37.483 +05:30 [INF] jobb
+2020-02-14 21:48:37.484 +05:30 [INF] joba
