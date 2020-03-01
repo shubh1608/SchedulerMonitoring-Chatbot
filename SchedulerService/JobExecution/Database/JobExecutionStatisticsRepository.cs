@@ -64,5 +64,35 @@ namespace JobExecution.Database
             }
             return jobStatsList;
         }
+
+        public List<JobExecutionStatistics> GetByName(string jobName)
+        {
+            var jobStatsList = new List<JobExecutionStatistics>();
+            string query = "select * from [SchedulerMonitoring].[dbo].[JobExecutionStatistics] where Name=@jobName";
+            using (SqlConnection cn = new SqlConnection(_connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, cn))
+            {
+                cn.Open();
+                cmd.Parameters.Add("@jobName", SqlDbType.VarChar, 50).Value = jobName;
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        var stats = new JobExecutionStatistics
+                        {
+                            Name = reader["Name"].ToString(),
+                            StartTime = Convert.ToDateTime(reader["StartTime"].ToString()),
+                            EndTime = Convert.ToDateTime(reader["EndTime"].ToString()),
+                            RunTime = Int32.Parse(reader["RunTime"].ToString()),
+                            ScheduledInterval = Int32.Parse(reader["ScheduledInterval"].ToString())
+                        };
+                        jobStatsList.Add(stats);
+                    }
+                }
+                cn.Close();
+            }
+            return jobStatsList;
+        }
     }
 }

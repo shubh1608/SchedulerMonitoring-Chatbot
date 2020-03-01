@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\JobExecutionStatisticsRepository.cs" />
+    <Compile Include="Domain\JobExecutionDetails.cs" />
     <Compile Include="Domain\JobExecutionStatistics.cs" />
     <Compile Include="Domain\JobInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

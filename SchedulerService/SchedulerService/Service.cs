@@ -52,7 +52,7 @@ namespace SchedulerService
                 .WithIdentity("triggerB", "group1")
                 .StartNow()
                 .WithSimpleSchedule(x => x
-                    .WithIntervalInSeconds(300)
+                    .WithIntervalInSeconds(120)
                     .RepeatForever())
                 .Build();
 

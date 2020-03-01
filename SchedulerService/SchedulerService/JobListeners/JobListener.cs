@@ -33,10 +33,10 @@ namespace SchedulerService.JobListeners
             var trg = context.Trigger as ISimpleTrigger;
             var stats = new JobExecutionStatistics {
                 Name = context.JobDetail.Key.Name,
-                StartTime = context.Trigger.StartTimeUtc.DateTime,
-                EndTime = context.Trigger.StartTimeUtc.DateTime.AddMilliseconds(context.JobRunTime.Milliseconds),
-                RunTime = context.JobRunTime.Milliseconds,
-                ScheduledInterval = Int32.Parse(trg.RepeatInterval.TotalSeconds.ToString())
+                StartTime = context.FireTimeUtc.DateTime,
+                EndTime = context.FireTimeUtc.DateTime.AddSeconds(context.JobRunTime.TotalSeconds),
+                RunTime = Convert.ToInt32(context.JobRunTime.TotalSeconds),
+                ScheduledInterval = Convert.ToInt32(trg.RepeatInterval.TotalSeconds)
             };
             repository.Insert(stats);
             return Task.CompletedTask;

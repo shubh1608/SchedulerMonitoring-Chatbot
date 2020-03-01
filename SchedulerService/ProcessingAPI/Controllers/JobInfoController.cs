@@ -3,31 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using ProcessingAPI.Service;
 
 namespace ProcessingAPI.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
     public class JobInfoController : ControllerBase
     {
         private JobInfoService _jobStatusService { get; set; }
-        public JobInfoController()
+        public JobInfoController(IConfiguration configuration)
         {
-            _jobStatusService = new JobInfoService();
+            _jobStatusService = new JobInfoService(configuration);
         }
 
-        // GET api/values/5
-        //[HttpGet("{id}")]
         [HttpGet]
+        [Route("api/jobinfo")]
         public ActionResult GetStatus()
         {
-            return new JsonResult(new { Success = true, Result = "Empty yet!!!"});
+
+            var res = _jobStatusService.GetJobStatus();
+            return new JsonResult(res);
         }
 
-        public ActionResult GetJobStatus(string jobId)
+        [HttpGet]
+        [Route("api/jobinfo/{jobname}")]
+        public ActionResult GetJobStatus(string jobname)
         {
-            return new JsonResult(new { });
+            var jobDetails = _jobStatusService.GetJobExecutionDetails(jobname);
+            return new JsonResult(jobDetails);
         }
     }
 }
