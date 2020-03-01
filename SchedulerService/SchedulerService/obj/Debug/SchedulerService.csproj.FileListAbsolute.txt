@@ -21,3 +21,5 @@ C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerServi
 C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\obj\Debug\SchedulerService.csproj.CopyComplete
 C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\obj\Debug\SchedulerService.exe
 C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\obj\Debug\SchedulerService.pdb
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\JobExecution.dll
+C:\Code\Personal_Git_Repo\NLP_Project\SchedulerMonitoring_Chatbot\SchedulerService\SchedulerService\bin\Debug\JobExecution.pdb

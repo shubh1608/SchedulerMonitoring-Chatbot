@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SchedulerService.Domain
+namespace JobExecution.Domain
 {
     public class JobExecutionStatistics
     {
