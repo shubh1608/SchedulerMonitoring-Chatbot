@@ -1,2 +1,2 @@
-# SchedulerMonitoring_Chatbot
-A bot for monitoring jobs which are scheduled to perform background tasks.
+# SchedulerMonitoring Assistant
+A contextual assistant for monitoring jobs which are scheduled to perform background tasks.
