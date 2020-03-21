@@ -5,12 +5,15 @@
 - good morning
 - good evening
 - hey there
+- Hola
+- hola bot
 
 ## intent:goodbye
 - bye
 - goodbye
 - see you around
 - see you later
+- ok bye
 
 ## intent:affirm
 - yes
@@ -19,38 +22,37 @@
 - that sounds good
 - correct
 
-## intent:deny
-- no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
+## intent:jobstatus
+- show me the status of jobs in scheduler
+- show me the status
+- What's the status?
+- What is the status of jobs?
+- How are the jobs in scheduler?
+- Please show me the status of jobs in scheduler
+- Pls, show me the status
 
-## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
+## intent:jobdetails
+- show me the status for [joba](jobname:job-a)
+- show me the details for [JobA](jobname:job-a)
+- show me the details for [jobA](jobname:job-a)
+- give me the details for [jobA](jobname:job-a)
+- fetch me the details for [job-a](jobname:job-a)
+- show me the status for [jobb](jobname:job-b)
+- show me the details for [JobB](jobname:job-b)
+- show me the details for [jobB](jobname:job-b)
+- give me the details for [jobB](jobname:job-b)
+- fetch me the details for [job-b](jobname:job-b)
 
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
+## synonym:job-a
+- jobA
+- joba
+- JobA
+- job-A
+- job-a
 
-## intent:bot_challenge
-- are you a bot?
-- are you a human?
-- am I talking to a bot?
-- am I talking to a human?
+## synonym:job-b
+- jobB
+- jobb
+- JobB
+- job-b
+- job-B
