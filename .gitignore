@@ -32,6 +32,10 @@ bld/
 [Ll]ogs/
 models
 _pycache_
+.vscode
+
+#rasa files
+*.dot
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

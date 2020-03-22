@@ -1,36 +1,24 @@
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
+%YAML 1.1
+---
 actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
+- action_jobdetails
+- action_jobstatus
+- action_validate_jobname
 - utter_goodbye
-- utter_iamabot
-
+- utter_greet
+entities:
+- jobname
+intents:
+- jobdetails
+- jobstatus
+- greet
+- goodbye
+- affirm
+slots:
+  jobname:
+    type: text
 templates:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
   utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: Bye
+  utter_greet:
+  - text: Hey! How may i help you today
