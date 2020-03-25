@@ -1,0 +1,1 @@
+Failed to restart SchedulerService on DESKTOP-39N2S13. Error: Service 'RabbitMQ (RabbitMQ)' cannot be stopped due to the following error: Cannot open RabbitMQ service on computer 'DESKTOP-39N2S13'.

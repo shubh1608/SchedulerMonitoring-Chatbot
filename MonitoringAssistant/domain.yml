@@ -1,18 +1,22 @@
 %YAML 1.1
 ---
 actions:
+- action_fetch_serverdetails
 - action_jobdetails
 - action_jobstatus
+- action_restart_service
 - action_validate_jobname
 - utter_goodbye
 - utter_greet
 entities:
 - jobname
 intents:
-- jobdetails
-- jobstatus
+- serverstatus
 - greet
+- jobdetails
+- servicerestart
 - goodbye
+- jobstatus
 - affirm
 slots:
   jobname:

@@ -5,6 +5,7 @@
 - that sounds good
 - correct
 - Ok, Thanks
+- Ok, Thanks
 
 ## intent:goodbye
 - bye
@@ -13,6 +14,7 @@
 - see you later
 - ok bye
 - Ok
+- Thanks, bye
 
 ## intent:greet
 - hey
@@ -26,6 +28,8 @@
 - Hi
 - Hello bot
 - Hello
+- Hello
+- Hi
 
 ## intent:jobdetails
 - show me the status for [joba](jobname:job-a)
@@ -40,6 +44,8 @@
 - fetch me the details for [job-b](jobname)
 - show me the details for [job-b](jobname)
 - show me the details for [job-a](jobname)
+- give me the details for [joba](jobname:job-a)
+- show me the status for [job-d](jobname)
 
 ## intent:jobstatus
 - show me the status of jobs in scheduler
@@ -54,6 +60,27 @@
 - show me the status of jobs
 - find me job status
 - show me the status of jobs
+- show me the job status
+- give me the status of jobs
+
+## intent:serverstatus
+- show me the server statistics
+- show me the status of server
+- show me server status
+- give me server statistics
+- give me server status
+- fetch me server statistics
+- fetch me server status
+- pls give me the server statistics
+- Ok, show me server status
+
+## intent:servicerestart
+- restart the service
+- pls restart the service
+- do a service restart once
+- restart service
+- pls restart the service
+- restart service
 
 ## synonym:job-a
 - joba

@@ -51,7 +51,7 @@ namespace ProcessingAPI.Service
         {
             var windowRecords = jobExecutionStatistics.Where(j => j.StartTime > DateTime.UtcNow.AddSeconds(-secondsBefore));
             avgRunTime = Convert.ToInt16(windowRecords.Average(j => j.RunTime));
-            numOfOccurence = FindRunsInTimePeriod(-secondsBefore, jobExecutionStatistics);
+            numOfOccurence = FindRunsInTimePeriod(secondsBefore, jobExecutionStatistics);
             numOfMisFires = Math.Abs(Threshold - numOfOccurence);
         }
 

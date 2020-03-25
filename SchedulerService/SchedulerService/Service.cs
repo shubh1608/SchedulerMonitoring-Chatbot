@@ -33,7 +33,7 @@ namespace SchedulerService
         public void ScheduleJobs()
         {
             IJobDetail jobA = JobBuilder.Create<JobA>()
-            .WithIdentity("jobA", "group1")
+            .WithIdentity("job-a", "group1")
             .Build();
 
             ITrigger triggerA = TriggerBuilder.Create()
@@ -45,7 +45,7 @@ namespace SchedulerService
                 .Build();
 
             IJobDetail jobB = JobBuilder.Create<JobB>()
-            .WithIdentity("jobB", "group1")
+            .WithIdentity("job-b", "group1")
             .Build();
 
             ITrigger triggerB = TriggerBuilder.Create()
