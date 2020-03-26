@@ -30,5 +30,13 @@ namespace ProcessingAPI.Controllers
             var jobDetails = _jobStatusService.GetJobExecutionDetails(jobname);
             return new JsonResult(jobDetails);
         }
+
+        [HttpGet]
+        [Route("api/jobinfo/validate/{jobname}")]
+        public ActionResult ValidateJobName(string jobName)
+        {
+            bool res = jobName.ToLower() == "job-a" ? true : jobName.ToLower() == "job-a" ? true : false;
+            return new JsonResult(res);
+        }
     }
 }

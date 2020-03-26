@@ -73,3 +73,18 @@
     - action_restart_service
 * goodbye
     - utter_goodbye
+
+## interactive_story_1
+* greet
+    - utter_greet
+* jobstatus
+    - action_jobstatus
+* jobdetails{"jobname": "job-a"}
+    - slot{"jobname": "job-a"}
+    - action_validate_jobname
+    - slot{"jobname": "job-a"}
+    - action_jobdetails
+* servicerestart
+    - action_restart_service
+* affirm
+    - utter_goodbye

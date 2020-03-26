@@ -6,6 +6,7 @@
 - correct
 - Ok, Thanks
 - Ok, Thanks
+- thanks
 
 ## intent:goodbye
 - bye
@@ -30,6 +31,7 @@
 - Hello
 - Hello
 - Hi
+- Hello
 
 ## intent:jobdetails
 - show me the status for [joba](jobname:job-a)
@@ -46,6 +48,7 @@
 - show me the details for [job-a](jobname)
 - give me the details for [joba](jobname:job-a)
 - show me the status for [job-d](jobname)
+- show me the details for [joba](jobname:job-a)
 
 ## intent:jobstatus
 - show me the status of jobs in scheduler
@@ -62,6 +65,7 @@
 - show me the status of jobs
 - show me the job status
 - give me the status of jobs
+- show me the job status
 
 ## intent:serverstatus
 - show me the server statistics
@@ -80,6 +84,7 @@
 - do a service restart once
 - restart service
 - pls restart the service
+- restart service
 - restart service
 
 ## synonym:job-a

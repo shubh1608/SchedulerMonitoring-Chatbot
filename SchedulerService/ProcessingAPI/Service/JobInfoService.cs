@@ -49,9 +49,9 @@ namespace ProcessingAPI.Service
 
         private void CalculateMetrics(int secondsBefore, List<JobExecutionStatistics> jobExecutionStatistics, ref int avgRunTime, ref int numOfOccurence, ref int numOfMisFires)
         {
-            var windowRecords = jobExecutionStatistics.Where(j => j.StartTime > DateTime.UtcNow.AddSeconds(-secondsBefore));
-            avgRunTime = Convert.ToInt16(windowRecords.Average(j => j.RunTime));
-            numOfOccurence = FindRunsInTimePeriod(secondsBefore, jobExecutionStatistics);
+            var windowRecords = jobExecutionStatistics.Where(j => j.StartTime > DateTime.UtcNow.AddSeconds(-secondsBefore)).ToList();
+            avgRunTime = windowRecords.Count() > 0 ? Convert.ToInt16(windowRecords.Average(j => j.RunTime)) : 0;
+            numOfOccurence = windowRecords.Count() > 0 ? FindRunsInTimePeriod(secondsBefore, jobExecutionStatistics) : 0;
             numOfMisFires = Math.Abs(Threshold - numOfOccurence);
         }
 

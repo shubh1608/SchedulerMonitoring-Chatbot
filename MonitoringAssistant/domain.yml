@@ -11,13 +11,13 @@ actions:
 entities:
 - jobname
 intents:
-- serverstatus
 - greet
-- jobdetails
-- servicerestart
-- goodbye
 - jobstatus
+- servicerestart
 - affirm
+- jobdetails
+- serverstatus
+- goodbye
 slots:
   jobname:
     type: text

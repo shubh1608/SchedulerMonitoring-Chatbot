@@ -5,6 +5,11 @@ from rasa_sdk.events import SlotSet
 import json
 import requests
 import pandas as pd
+import os
+import win32serviceutil
+
+service_name = 'SchedulerService'
+api_baseurl = 'http://localhost:58316/api/jobinfo'
 
 class ActionJobsStatus(Action):
 
@@ -13,7 +18,7 @@ class ActionJobsStatus(Action):
 
     def run(self, dispatcher, tracker,domain):
         dispatcher.utter_message('Wait, let me fetch the results.')
-        text_resp = get('http://localhost:58316/api/jobinfo')
+        text_resp = get(api_baseurl)
         df = pd.read_json(text_resp)
         df['status'] = df['status'].map(convert_status)
         dispatcher.utter_message('Please find job status below.')
@@ -26,7 +31,7 @@ class ActionJobDetails(Action):
 
     def run(self, dispatcher, tracker, domain):
         jobname = tracker.get_slot('jobname')
-        text_resp = get('http://localhost:58316/api/jobinfo/{0}'.format(jobname))
+        text_resp = get(api_baseurl+'/'+jobname)
         l = []
         l.append(json.loads(text_resp))
         df = pd.read_json(json.dumps(l))
@@ -40,15 +45,9 @@ class ActionValidateJobName(Action):
         return 'action_validate_jobname'
 
     def run(self, dispatcher, tracker, domain):
-        # before fetching the job details, call this action for validation
-        # it will check if this job exists in scheduler or not
-        # if not simply return false with a message that this job does not exist
-        # if yes than call above fetch details action method
-        #how to do?
-        # call web api for validation, it will just return true or false
-        # based on that we can decide here to call other actions or not
         jobname = tracker.get_slot('jobname')
-        if False:
+        res = get(api_baseurl+'/validate/'+ jobname)
+        if res == 'false':
             dispatcher.utter_message('Job not found in scheduler, could you please check job name.')
         else:
             return [SlotSet('jobname', jobname )]
@@ -68,8 +67,7 @@ class ActionRestartService(Action):
         return 'action_restart_service'
 
     def run(self, dispatcher, tracker, domain):
-        #to-do: actual implementation of scripts
-        # need to find out how to run scripts in elevated permission.
+        win32serviceutil.RestartService(service_name)
         dispatcher.utter_message('Service restarted successfully.')
 
 def get(url):
@@ -86,6 +84,3 @@ def convert_status(i):
         return "WARNING"
     else:
         return "ATTENTION"
-
-# result = get('http://localhost:58316/api/jobinfo/jobA')
-# print(result)
