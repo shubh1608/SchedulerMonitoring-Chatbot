@@ -71,7 +71,14 @@ Idea is to build a contextual assistant which is intelligent enough to understan
 
 ## Getting Started
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
+2. Setup windows service first( find in SchedulerService folder in repo), see how to use Topshelf, its easy.
+3. Install SQL Server and create a database, for table schema, refer SQL script in service solution, you can use MS Visual Studio.
+4. After above steps, you can start the service and if everything goes well, you should see records in table. That means background service is running and dumping it's statistics in DB.
+4. Web APIs hosting setup is pending, so open and run temporarily in Visual Studio itself.
+5. After running APIs, try accessing them in browser, they must return status of jobs in json.
+6. Setup Rasa locally, refer their installation steps - https://rasa.com/docs/rasa/user-guide/installation/
+7. Go to the chatbot location() , open command prompt and run commands for running chatbot.
+8. Say Hello to bot.
 
 
 ## Contact
