@@ -1,80 +1,72 @@
-*Instructions: Click on the raw button in the upper right hand corner of this box.  Copy and paste the template into the README.md document on your github.  Fill in the titles, information and links where prompted! Feel free to stray a bit to suit your project but try to stick to the format as closely as possible for consistency across DSWG projects.*
+# Scheduler Monitoring Chatbot
 
-# Project Name
-This project is a part of the [Data Science Working Group](http://datascience.codeforsanfrancisco.org) at [Code for San Francisco](http://www.codeforsanfrancisco.org).  Other DSWG projects can be found at the [main GitHub repo](https://github.com/sfbrigade/data-science-wg).
-
-#### -- Project Status: [Active, On-Hold, Completed]
+#### Project Status: [Active]
 
 ## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
+I am working on creating a contextual assistant which can help DevOps, Developers and other Stakeholders in monitoring the background process running in schedulers. While working for one of the clients, we encountered an issue where the jobs were stuck for months resulting in pile up of items which eventually needed manual intervention for processing. 
 
-### Partner
-* [Name of Partner organization/Government department etc..]
-* Website for partner
-* Partner contact: [Name of Contact], [slack handle of contact if any]
-* If you do not have a partner leave this section out
+Idea is to build a contextual assistant which is intelligent enough to understand your queries in natural language and respond accordingly.
 
 ### Methods Used
-* Inferential Statistics
 * Machine Learning
-* Data Visualization
-* Predictive Modeling
-* etc.
+* Deep Learning
+* Natural Language Processing
+* Rasa(contextual assistant building framework)
+* Rasa-x(UI support for training assistant)
+* Rest APIs
+* Windows Service
 
 ### Technologies
-* R 
 * Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
-* HTML
-* JavaScript
-* etc. 
+* C#
+* .Net Framework
+* Web APIs
+* Topshelf
+* SQL Server 
+
 
 ## Project Description
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+   ### Problem Statement
+      * We encountered a major production issue while working for one of my clients, where a job which was responsible for processing notifications were stuck for 2-3 months, eventually the job needs to be restarted manually and thousands of notifications were processed with human intervention. 
+      * There was no way for us to get notified as we did not have any monitoring capability. We were asked to take care of this problem, we researched and found out that jobs getting stuck is one of the common issues which is the case irrespective of whatever scheduling library you are using, internally it can happen due to failures in acquiring new connections from the thread pool which is not predictable in nature.
+      
+   ### Solution
+      * We were asked to provide an rest based end point which can be called to see the health metrics of all the jobs running in the server. This involves designing of the whole system, which started with defining the statistics which needs to be captured and using which we can infer the jobs status(GOOD, WARNING, ATTENTION).
+      * We did provided Rest APIs which can tell us the status of jobs with other detailed statistics also.
+      * But i wanted the solution to be more convenient to use and easily approachable.
+      * So i decided to build a contextual chatbot/assistant which can understand your natural queries and respond accordingly.
+      
+   ### Components
+      1. Windows Service
+         * Actually it's not a window service, but a console application which i am using as a Window Service. Thanks to Topshelf library which sits on top of console application and provides the ease of console app and background running nature of window service. Refer their documentation for more details - https://topshelf.readthedocs.io/en/latest/
+         * Using Quartz dot net scheduling library which is running 2 Jobs in background, this is for simulating the actual environment.https://www.quartz-scheduler.net/documentation/index.html
+         * Using Quartz job listeners to capture the Job execution statistics, and these statistics are stored in SQL Server database
+         
+      2. Web API( .Net framework for creating Restful web services)
+         * Implemented Rest APIs which can be called to fetch the status and execution details for checking/monitoring the health of background jobs.
+         * They won't just fetch the details from database, they will first fetch the data, process it, calculate other metrics(Number of occurence, number of misfires, average running time) using which their status(GOOD, WARNING, ATTENTION) are derived.
+         
+      3. Contextual Assistant/ Chatbot
+         * I am using Rasa which is one of the best open source framework for creating a chatbot, you wont need to setup your own natural language processing pipeline from the scratch. You just have to focus on solving your business problems.Refer more details here - https://rasa.com/docs/getting-started/
+         * Chatbot is already out there, you just need to figure out how to use it. But yes it will definitely need more training.
+         * Training can be done using Rasa Interactive environment, which is console based UI for training a bot.
+         * Chatbot capabilities as of now
+            1. It can fetch the status of all the jobs running(GOOD/WARNING/ATTENTION).
+            2. It can fetch you particular job execution details(occurences, misfires, average runtime, frequency).
+            3. If you think you want to restart your scheduler service, you can tell a bot to do a restart.
+
 
 ## Needs of this project
-
-- frontend developers
-- data exploration/descriptive statistics
+- Web Backend Developers
+- NLP Engineers
 - data processing/cleaning
-- statistical modeling
 - writeup/reporting
-- etc. (be as specific as possible)
+
 
 ## Getting Started
-
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
 2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
 
-    *If using offline data mention that and how they may obtain the data from the froup)*
-    
-3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
-4. etc...
-
-*If your project is well underway and setup is fairly complicated (ie. requires installation of many packages) create another "setup.md" file and link to it here*  
-
-5. Follow setup [instructions](Link to file)
-
-## Featured Notebooks/Analysis/Deliverables
-* [Notebook/Markdown/Slide Deck Title](link)
-* [Notebook/Markdown/Slide DeckTitle](link)
-* [Blog Post](link)
-
-
-## Contributing DSWG Members
-
-**Team Leads (Contacts) : [Full Name](https://github.com/[github handle])(@slackHandle)**
-
-#### Other Members:
-
-|Name     |  Slack Handle   | 
-|---------|-----------------|
-|[Full Name](https://github.com/[github handle])| @johnDoe        |
-|[Full Name](https://github.com/[github handle]) |     @janeDoe    |
 
 ## Contact
-* If you haven't joined the SF Brigade Slack, [you can do that here](http://c4sf.me/slack).  
-* Our slack channel is `#datasci-projectname`
-* Feel free to contact team leads with any questions or if you are interested in contributing!
+* Shubham Patel, email: shubhampatel1608@gmail.com, mobile: 8103856241
