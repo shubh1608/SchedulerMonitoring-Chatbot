@@ -54,6 +54,12 @@ Idea is to build a contextual assistant which is intelligent enough to understan
       1. It can fetch the status of all the jobs running(GOOD/WARNING/ATTENTION).
       2. It can fetch you particular job execution details(occurences, misfires, average runtime, frequency).
       3. If you think you want to restart your scheduler service, you can tell a bot to do a restart.
+      
+   ### Pending Tasks
+   1. Self Hosting of Web APIs using OWIN framework.
+   2. Proper setup of SQL Server DB, currently it's in temporary DB.
+   3. More training of Chatbot.
+   4. Can increase bots capability like fetching logs, exceptions from server.
 
 
 ## Needs of this project
